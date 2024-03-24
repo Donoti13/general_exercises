@@ -1,0 +1,961 @@
+html {
+    font-family: sans-serif;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+  }
+  
+  td, th {
+    border: 1px solid rgb(190,190,190);
+    padding: 10px 20px;
+  }
+  
+  th {
+    background-color: rgb(235,235,235);
+  }
+  
+  td {
+    text-align: center;
+  }
+  
+  tr:nth-child(even) td {
+    background-color: rgb(250,250,250);
+  }
+  
+  tr:nth-child(odd) td {
+    background-color: rgb(245,245,245);
+  }
+  
+  caption {
+    padding: 10px;
+  }
+
+
+/*
+
+// TABLE BELOW and CSS
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Items sold summary</title>
+    <link href="genex.css" rel="stylesheet" type="text/css">
+  </head>
+
+<body>
+    <h1>Items sold summary</h1>
+
+    <table>
+      <caption>Items Sold August 2016</caption>
+      <thead>
+        <tr>
+          <td colspan="2" rowspan="2"></td>
+          <th id="Clothes" colspan="3">Clothes</th>
+          <th id="Accessories" colspan="2">Accessories</th>
+        </tr>
+        <tr>
+          <th id="Trousers" headers="Clothes">Trousers</th>
+          <th id="Skirts" headers="Clothes">Skirts</th>
+          <th id="Dresses" headers="Clothes">Dresses</th>
+          <th id="Bracelets" headers="Accessories">Bracelets</th>
+          <th id="Rings" headers="Accessories">Rings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th id="Belgium" rowspan="3">Belgium</th>
+          <th id="Antwerp" headers="Belgium">Antwerp</th>
+          <td headers="Antwerp Belgium Clothes Trousers">56</td>
+          <td headers="Antwerp Belgium Clothes Skirts">22</td>
+          <td headers="Antwerp Belgium Clothes Dresses">43</td>
+          <td headers="Antwerp Belgium Accessories Bracelets">72</td>
+          <td headers="Antwerp Belgium Accessories Rings">23</td>
+        </tr>
+        <tr>
+          <th id="Gent" headers="Belgium">Gent</th>
+          <td headers="Gent Belgium Clothes Trousers">46</td>
+          <td headers="Gent Belgium Clothes Skirts">18</td>
+          <td headers="Gent Belgium Clothes Dresses">50</td>
+          <td headers="Gent Belgium Accessories Bracelets">61</td>
+          <td headers="Gent Belgium Accessories Rings">15</td>
+        </tr>
+        <tr>
+          <th id="Brussels" headers="Belgium">Brussels</th>
+          <td headers="Brussels Belgium Clothes Trousers">51</td>
+          <td headers="Brussels Belgium Clothes Skirts">27</td>
+          <td headers="Brussels Belgium Clothes Dresses">38</td>
+          <td headers="Brussels Belgium Accessories Bracelets">69</td>
+          <td headers="Brussels Belgium Accessories Rings">28</td>
+        </tr>
+        <tr>
+          <th id="Netherlands" rowspan="2">The Netherlands</th>
+          <th id="Amsterdam" headers="Netherlands">Amsterdam</th>
+          <td headers="Amsterdam Netherlands Clothes Trousers">89</td>
+          <td headers="Amsterdam Netherlands Clothes Skirts">34</td>
+          <td headers="Amsterdam Netherlands Clothes Dresses">69</td>
+          <td headers="Amsterdam Netherlands Accessories Bracelets">85</td>
+          <td headers="Amsterdam Netherlands Accessories Rings">38</td>
+        </tr>
+        <tr>
+          <th id="Utrecht" headers="Netherlands">Utrecht</th>
+          <td headers="Utrecht Netherlands Clothes Trousers">80</td>
+          <td headers="Utrecht Netherlands Clothes Skirts">12</td>
+          <td headers="Utrecht Netherlands Clothes Dresses">43</td>
+          <td headers="Utrecht Netherlands Accessories Bracelets">36</td>
+          <td headers="Utrecht Netherlands Accessories Rings">19</td>
+        </tr>
+      </tbody>
+    </table>
+
+</body>
+
+</html>
+
+
+// CSS TABLE 
+
+html {
+    font-family: sans-serif;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+  }
+  
+  td, th {
+    border: 1px solid rgb(190,190,190);
+    padding: 10px 20px;
+  }
+  
+  th {
+    background-color: rgb(235,235,235);
+  }
+  
+  td {
+    text-align: center;
+  }
+  
+  tr:nth-child(even) td {
+    background-color: rgb(250,250,250);
+  }
+  
+  tr:nth-child(odd) td {
+    background-color: rgb(245,245,245);
+  }
+  
+  caption {
+    padding: 10px;
+  }
+
+*/
+
+
+
+/*
+
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Items sold summary</title>
+    <link href="genex.css" rel="stylesheet" type="text/css">
+  </head>
+
+<body>
+    <h1>Items sold summary</h1>
+
+    <table>
+      <caption>Items Sold August 2016</caption>
+      <thead>
+        <tr>
+          <td colspan="2" rowspan="2"></td>
+          <th colspan="3", scope="col">Clothes</th>
+          <th colspan="2", scope="col">Accessories</th>
+        </tr>
+        <tr>
+          <th scope="col">Trousers</th>
+          <th scope="col">Skirts</th>
+          <th scope="col">Dresses</th>
+          <th scope="col">Bracelets</th>
+          <th>Rings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3", scope="row">Belgium</th>
+          <th scope="row">Antwerp</th>
+          <td>56</td>
+          <td>22</td>
+          <td>43</td>
+          <td>72</td>
+          <td>23</td>
+        </tr>
+        <tr>
+          <th scope="row">Gent</th>
+          <td>46</td>
+          <td>18</td>
+          <td>50</td>
+          <td>61</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <th scope="row">Brussels</th>
+          <td>51</td>
+          <td>27</td>
+          <td>38</td>
+          <td>69</td>
+          <td>28</td>
+        </tr>
+        <tr>
+          <th rowspan="2", scope="row">The Netherlands</th>
+          <th scope="row">Amsterdam</th>
+          <td>89</td>
+          <td>34</td>
+          <td>69</td>
+          <td>85</td>
+          <td>38</td>
+        </tr>
+        <tr>
+          <th scope="row">Utrecht</th>
+          <td>80</td>
+          <td>12</td>
+          <td>43</td>
+          <td>36</td>
+          <td>19</td>
+        </tr>
+      </tbody>
+    </table>
+
+</body>
+
+</html>
+
+*/
+
+/*
+
+// ANOTHER TABLE AND CSS 
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width">
+
+    <title>My spending record</title>
+
+    <link href="genex.css" rel="stylesheet" type="text/css">
+
+    <style>
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <h1>My spending record</h1>
+
+
+
+      <table>
+
+        <caption>How I chose to spend my money</caption>
+
+        <thead>
+
+          <tr>
+
+            <th>Purchase</th>
+
+            <th>Location</th>
+
+            <th>Date</th>
+
+            <th>Evaluation</th>
+
+            <th>Cost (€)</th>
+
+          </tr>
+
+        </thead>
+
+        <tfoot>
+
+          <tr>
+
+            <td colspan="4">SUM</td>
+
+            <td>118</td>
+
+          </tr>
+
+        </tfoot>
+
+        <tbody>
+
+          <tr>
+
+            <td>Haircut</td>
+
+            <td>Hairdresser</td>
+
+            <td>12/09</td>
+
+            <td>Great idea</td>
+
+            <td>30</td>
+
+          </tr>
+
+          <tr>
+
+            <td>Lasagna</td>
+
+            <td>Restaurant</td>
+
+            <td>12/09</td>
+
+            <td>Regrets</td>
+
+            <td>18</td>
+
+          </tr>
+
+          <tr>
+
+            <td>Shoes</td>
+
+            <td>Shoeshop</td>
+
+            <td>13/09</td>
+
+            <td>Big regrets</td>
+
+            <td>65</td>
+
+          </tr>
+
+          <tr>
+
+            <td>Toothpaste</td>
+
+            <td>Supermarket</td>
+
+            <td>13/09</td>
+
+            <td>Good</td>
+
+            <td>5</td>
+
+          </tr>
+
+        </tbody>
+
+    </table>
+
+
+
+  </body>
+
+</html>
+
+
+
+// CSS
+
+html {
+    font-family: sans-serif;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+  }
+  
+  td, th {
+    border: 1px solid rgb(190,190,190);
+    padding: 10px 20px;
+  }
+  
+  th {
+    background-color: rgb(235,235,235);
+  }
+  
+  td {
+    text-align: center;
+  }
+  
+  tr:nth-child(even) td {
+    background-color: rgb(250,250,250);
+  }
+  
+  tr:nth-child(odd) td {
+    background-color: rgb(245,245,245);
+  }
+  
+  caption {
+    padding: 10px;
+  }
+
+tbody {
+    font-size: 95%;
+    font-style: italic;
+}
+
+tfoot {
+    font-weight: bold;
+}
+
+*/
+
+
+
+
+/*
+//TABLE WITH CSS IN HMTL
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width">
+
+    <title>School timetable</title>
+
+    <style>
+
+    html {
+
+      font-family: sans-serif;
+
+    }
+
+
+
+    table {
+
+      border-collapse: collapse;
+
+      border: 2px solid rgb(200,200,200);
+
+      letter-spacing: 1px;
+
+      font-size: 0.8rem;
+
+    }
+
+
+
+    td, th {
+
+      border: 1px solid rgb(190,190,190);
+
+      padding: 10px 20px;
+
+    }
+
+
+
+    td {
+
+      text-align: center;
+
+    }
+
+
+
+    caption {
+
+      padding: 10px;
+
+    }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <h1>School timetable</h1>
+
+
+
+    <table>
+
+        <caption>
+
+            DINASOURS IN THE Jurasic Period 
+
+        </caption>
+
+    <colgroup>
+
+        <col/>
+
+        <col/>
+
+        <col style="background-color: yellow;">
+
+        <col style="width: 182px;">
+
+        <col style="background-color: #97DB9A;">
+
+        <col style="background-color: #DCC48E; border: 4px solid #C1437A;">
+
+        <col style="width: 142px">
+
+        <col style="width: 142px">
+
+    </colgroup>
+
+    <thead>  
+
+      <tr>
+
+       
+
+        <td>&nbsp;</td>
+
+        <th>Mon</th>
+
+        <th>Tues</th>
+
+        <th>Wed</th>
+
+        <th>Thurs</th>
+
+        <th>Fri</th>
+
+        <th>Sat</th>
+
+        <th>Sun</th>
+
+       
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr>
+
+        <th>1st period</th>
+
+        <td>English</td>
+
+        <td>&nbsp;</td>
+
+        <td>&nbsp;</td>
+
+        <td>German</td>
+
+        <td>Dutch</td>
+
+        <td>&nbsp;</td>
+
+        <td>&nbsp;</td>
+
+      </tr>
+
+      <tr>
+
+        <th>2nd period</th>
+
+        <td>English</td>
+
+        <td>English</td>
+
+        <td>&nbsp;</td>
+
+        <td>German</td>
+
+        <td>Dutch</td>
+
+        <td>&nbsp;</td>
+
+        <td>&nbsp;</td>
+
+      </tr>
+
+      <tr>
+
+        <th>3rd period</th>
+
+        <td>&nbsp;</td>
+
+        <td>German</td>
+
+        <td>&nbsp;</td>
+
+        <td>German</td>
+
+        <td>Dutch</td>
+
+        <td>&nbsp;</td>
+
+        <td>&nbsp;</td>
+
+      </tr>
+
+    </tbody>
+
+    <tfoot>
+
+      <tr>
+
+        <th>4th period</th>
+
+        <td>&nbsp;</td>
+
+        <td>English</td>
+
+        <td>&nbsp;</td>
+
+        <td>English</td>
+
+        <td>Dutch</td>
+
+        <td>&nbsp;</td>
+
+        <td>&nbsp;</td>
+
+      </tr>
+
+    </tfoot>  
+
+    </table>
+
+
+
+
+
+  </body>
+
+</html>
+
+*/
+
+
+
+
+/*
+
+// ANOTHER TABLE HTML
+
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Animals table</title>
+    <link href="genex.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Animals table</h1>
+
+    <table>
+      <tr>
+        <th colspan="2">Animals</th>
+      </tr>
+      <tr>
+        <th colspan="2">Hippopotamus</th>
+      </tr>
+      <tr>
+        <th rowspan="2">Horse</th>
+        <td>Mare</td>
+      </tr>
+      <tr>
+        <td>Stallion</td>
+      </tr>
+      <tr>
+        <th colspan="2">Crocodile</th>
+      </tr>
+      <tr>
+        <th rowspan="2">Chicken</th>
+        <td>Hen</td>
+      </tr>
+      <tr>
+        <td>Rooster</td>
+      </tr>
+    </table>
+
+
+  </body>
+</html>
+
+//and CSS
+
+
+
+html {
+    font-family: sans-serif;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+  }
+  
+  td, th {
+    border: 1px solid rgb(190,190,190);
+    padding: 10px 20px;
+  }
+  
+  th {
+    background-color: rgb(235,235,235);
+  }
+  
+  td {
+    text-align: center;
+  }
+  
+  tr:nth-child(even) td {
+    background-color: rgb(250,250,250);
+  }
+  
+  tr:nth-child(odd) td {
+    background-color: rgb(245,245,245);
+  }
+  
+  caption {
+    padding: 10px;
+  }
+*/
+
+/*
+// html
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Dogs table</title>
+    <link href="genex.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Dogs Table</h1>
+
+    <table>
+      <tr>
+        <td>&nbsp;</td>
+        <th>Knocky</th>
+        <th>Flor</th>
+        <th>Ella</th>
+        <th>Juan</th>
+      </tr>
+      <tr>
+        <td>Breed</td>
+        <td>Jack Russell</td>
+        <td>Poodle</td>
+        <td>Streetdog</td>
+        <td>Cocker Spaniel</td>
+      </tr>
+      <tr>
+        <td>Age</td>
+        <td>16</td>
+        <td>9</td>
+        <td>10</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Owner</td>
+        <td>Mother-in-law</td>
+        <td>Me</td>
+        <td>Me</td>
+        <td>Sister-in-law</td>
+      </tr>
+      <tr>
+        <td>Eating Habits</td>
+        <td>Eats everyone's leftovers</td>
+        <td>Nibbles at food</td>
+        <td>Hearty eater</td>
+        <td>Will eat till he explodes</td>
+      </tr>
+    </table>
+
+
+  </body>
+</html>
+
+
+
+// CSS BELOW
+
+html {
+    font-family: sans-serif;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+  }
+  
+  td, th {
+    border: 1px solid rgb(190,190,190);
+    padding: 10px 20px;
+  }
+  
+  th {
+    background-color: rgb(235,235,235);
+  }
+  
+  td {
+    text-align: center;
+  }
+  
+  tr:nth-child(even) td {
+    background-color: rgb(250,250,250);
+  }
+  
+  tr:nth-child(odd) td {
+    background-color: rgb(245,245,245);
+  }
+  
+  caption {
+    padding: 10px;
+  }
+
+*/
+
+
+
+
+/*
+THIS IS HTML CODE FOR CSS BELLOW TABLE
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Table template</title>
+    <link href="genex.css" rel="stylesheet" type="text/css">
+  </head>
+
+
+  <body>
+
+
+    <h1>Table template</h1>
+
+    <table>
+       <tr>
+        <td>HI THIS IS FIRST CELL</td>
+        <td>HI THIS IS SECOND CELL</td>
+        <td>HI THIS IS THIRD CELL</td>
+        <td>HI THIS IS FOURTH CELL</td>
+       </tr>
+       
+    </table>
+
+  </body>
+</html>
+
+*/
+
+/*
+html {
+    font-family: sans-serif;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+  }
+  
+  td, th {
+    border: 1px solid rgb(190,190,190);
+    padding: 10px 20px;
+  }
+  
+  th {
+    background-color: rgb(235,235,235);
+  }
+  
+  td {
+    text-align: center;
+  }
+  
+  tr:nth-child(even) td {
+    background-color: rgb(250,250,250);
+  }
+  
+  tr:nth-child(odd) td {
+    background-color: rgb(245,245,245);
+  }
+  
+  caption {
+    padding: 10px;
+  }
+*/
+
+
+
+
+
+/*
+svg-circle {
+
+ background-color: aquamarine;
+ color: blue;
+ fill: transparent;
+}
+
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+*/
+
+
+/*
+const SVG_NS = "http://www.w3.org/2000/svg";
+const XLink_NS = "http://www.w3.org/1999/xlink";
+const image = document.createElementNS(SVG_NS, "image");
+image.setAttributeNS(null, "width", "100");
+image.setAttributeNS(null, "height", "100");
+image.setAttributeNS(XLink_NS, "xlink:href", "flower.png");
+
+*/
